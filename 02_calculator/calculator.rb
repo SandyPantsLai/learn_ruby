@@ -13,3 +13,11 @@ def sum(array)
   end
   sum
 end
+
+def multiply(a, *rest)
+  product = a
+  rest.each do |number|
+    product *= number
+  end
+  product
+end
