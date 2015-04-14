@@ -18,10 +18,16 @@ class TestCalculator < MiniTest::Test
     assert_equal 8, add(2, 6)
   end
 
+  def test_adds_negative_number
+    assert_equal -2, add(-8, 6)
+
  # subtract takes two parameters and subtracts the second from the first
   def test_subtracts_numbers
     assert_equal 6, subtract(10, 4)
   end
+
+  def test_subtracts_to_negative
+    assert_equal -2, subtract(6, 8)
 
 # sum takes an *array* of numbers and adds them all together
 # This one is a bit trickier!
