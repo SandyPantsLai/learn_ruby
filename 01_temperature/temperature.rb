@@ -1,0 +1,2 @@
+def ftoc(f)
+end
