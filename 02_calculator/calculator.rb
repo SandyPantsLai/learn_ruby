@@ -3,7 +3,7 @@ def add(a, b)
 end
 
 def subtract(a, b)
-  6
+  a - b
 end
 
 def sum(array)
