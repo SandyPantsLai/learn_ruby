@@ -62,17 +62,22 @@ class TestCalculator < MiniTest::Test
 
 # http://en.wikipedia.org/wiki/Factorial
   def test_computes_factorial_0
+    assert_equal 1, factorial(0)
   end
 
   def test_computes_factorial_1
+    assert_equal 1, factorial(0)
   end
 
   def test_computes_factorial_2
+    assert_equal 2, factorial(2)
   end
 
   def test_computes_factorial_5
+    assert_equal 120, factorial(5)
   end
 
   def test_computes_factorial_10
+    assert_equal 3628800, factorial(10)
   end
 end
