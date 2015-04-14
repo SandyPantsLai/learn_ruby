@@ -5,6 +5,9 @@ def translate(phrase)
     if ["a", "e", "i", "o", "u"].include?(word[0])
       word = word + "ay"
     else
+      ending = word[0] + "ay"
+      word[0] = ""
+      word = word + ending
     end
     pig_latin.push(word)
   end
