@@ -1,9 +1,19 @@
 class Array
-  def sum
-    sum = 0
-    self.each do |number|
-      sum += number
-    end
-    sum
+  def self.sum
   end
+
+  def sum
+    self.inject( 0 ) { |sum, x| sum += x }
+  end
+
+  def square
+    return [] if self == []
+    self.map {|x| x**2}
+  end
+
+  def square!
+    return [] if self == []
+    self.map! {|x| x**2}
+  end
+
 end

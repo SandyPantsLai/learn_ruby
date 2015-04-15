@@ -4,8 +4,8 @@ require "array_extensions" # we don't call it "array.rb" since that would be con
 class TestArray < MiniTest::Test
   # sum
   def test_has_sum_method
-    assert_respond_to [], sum
-    assert_respond_to Array, sum
+    assert_respond_to [], :sum
+    assert_respond_to Array, :sum
 
     # [] and Array are synonymous
     #
