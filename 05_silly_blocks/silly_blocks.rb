@@ -10,3 +10,7 @@ def repeater(repeat = 1)
     yield
   end
 end
+
+def adder(num = 1)
+  yield + num
+end
