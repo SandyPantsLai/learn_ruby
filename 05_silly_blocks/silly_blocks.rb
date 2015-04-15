@@ -4,3 +4,9 @@ def reverser
   end
   reverse_phrase.join(" ")
 end
+
+def repeater(repeat = 1)
+  repeat.times do
+    yield
+  end
+end
