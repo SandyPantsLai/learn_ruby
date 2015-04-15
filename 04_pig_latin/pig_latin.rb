@@ -1,15 +1,15 @@
 def translate(phrase)
-  pig_latin = []
-  phrase = phrase.split(" ")
-  phrase.each do |word|
-    if ["a", "e", "i", "o", "u"].include?(word[0])
-      word = word + "ay"
+  letters = ('a'..'z').to_a
+  vowels = ["a", "e", "i", "o", "u"]
+  consonants = letters - vowels
+  pig_latin = phrase.gsub(/\w+/) do|word| #regexp for word character one or more times in a row
+    if vowels.include?(word.downcase[0])
+      word + "ay"
     else
-      ending = word[0] + "ay"
-      word[0] = ""
-      word = word + ending
+      idx = word.index(/[aeiou]/) #return index match for first a or e or etc.
+      word[idx, word.length-idx] + word[0,idx] + "ay"
     end
-    pig_latin.push(word)
   end
-  pig_latin.join(" ")
 end
+
+
